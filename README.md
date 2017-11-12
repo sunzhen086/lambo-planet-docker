@@ -35,7 +35,7 @@ lambo-planet-docker项目提供了lambo-planet项目的docker构建配置,这里
 
 - 鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置国内镜像加速。
 
-- [阿里云加速器](https://cr.console.aliyun.com/).注册用户并且申请加速器，会获得如https://jxus37ad.mirror.aliyuncs.com这样的地址。我们需要将其配置给Docker引擎。
+- [阿里云加速器](https://cr.console.aliyun.com/).注册用户并且申请加速器，会获得如"https://jxus37ad.mirror.aliyuncs.com",这样的地址。我们需要将其配置给Docker引擎。
 
 - 在任务栏的鲸鱼图标上点右键-Settings-Daemon-Registry mirrors中填入上边的加速器地址
 
