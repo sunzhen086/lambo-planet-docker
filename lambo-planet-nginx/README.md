@@ -31,3 +31,33 @@ docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx -v /
 docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx -v /e/lambo-planet/lambo-planet/lambo-frontend/lambo-upms/dist:/apps/lambo/upms  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
 ```
 
+### 查看运行的容器
+
+```
+docker ps
+c4bfc0e2a5aa
+```
+
+### 重启容器
+
+```
+docker restart c4bfc0e2a5aa
+```
+
+### 停止容器
+
+```
+docker stop c4bfc0e2a5aa
+```
+
+### 启动容器
+
+```
+docker start c4bfc0e2a5aa
+```
+
+### 进入容器
+
+```
+docker exec -it c4bfc0e2a5aa /bin/bash
+```
