@@ -7,7 +7,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx
 ### run
 
 ```
-docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
+docker run  -d -p 80:80   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
 ```
 
 ### 命令说明
@@ -16,19 +16,23 @@ docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx  reg
 
 - -p 80:80 将容器的80端口映射为本地的80端口
 
-- -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx  将nginx的日志目录映射为本地目录(本地目录不需要提前创建),方便查看日志,冒号左右分别对应本地和容器
+### 将日志文件映射到本地,方便查看日志
+
+```
+docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
+```
 
 
-### 使用本地配置文件运行
+### 使用本地nginx配置文件运行,同时将日志映射到本地
 
 ```
 docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx -v /e/nginx.conf:/etc/nginx/nginx.conf  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
 ```
 
-### 使用本地程序运行
+### 使用本地程序运行,方便调试程序
 
 ```
-docker run  -d -p 80:80 -v /e/docker/lambo-planet/nginx/logs:/var/log/nginx -v /e/lambo-planet/lambo-planet/lambo-frontend/lambo-upms/dist:/apps/lambo/upms  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
+docker run  -d -p 80:80 -v /e/lambo-planet/lambo-planet/lambo-frontend/lambo-upms/dist:/apps/lambo/upms  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx:latest
 ```
 
 ### 查看运行的容器
