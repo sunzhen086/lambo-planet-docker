@@ -39,6 +39,6 @@ lambo-planet-docker项目提供了lambo-planet项目的docker构建配置,这里
 
 - 在任务栏的鲸鱼图标上点右键-Settings-Daemon-Registry mirrors中填入上边的加速器地址
 
-> 使用镜像
+## 使用镜像
 
-- 本项目的每一个子项目都代表着一个docker镜像,具体的使用请参考子项目下的REAMME.md
+- 本项目的每一个子项目都代表着一个docker镜像,镜像的具体使用请参考子项目下的REAMME.md
