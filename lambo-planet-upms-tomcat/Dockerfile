@@ -1,4 +1,6 @@
 FROM tomcat:8.5.23-jre8
+#指定挂载点
+VOLUME /data
 #维护者信息
 #MAINTAINER jiangkun "525278372@qq.com"
 COPY ./upms/lambo-upms-server.war /usr/local/tomcat/webapps/
