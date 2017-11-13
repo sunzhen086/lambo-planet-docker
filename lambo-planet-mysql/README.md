@@ -1,13 +1,13 @@
 ### pull
 
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis
+docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-mysql
 ```
 
 ### run
 
 ```
-docker run  -d -p 6379:6379   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis
+docker run  -d -p 3306:3306 -v /e/docker/lambo-planet/mysql/data:/var/lib/mysql  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-mysql
 ```
 
 ### 命令说明
@@ -16,11 +16,6 @@ docker run  -d -p 6379:6379   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-pla
 
 - -p 80:80 将容器的80端口映射为本地的80端口
 
-### 指定数据保存目录
-
-```
-docker run  -d -p 6379:6379 -v /e/docker/lambo-planet/redis/data:/data   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis
-```
 
 ### 查看运行的容器
 
