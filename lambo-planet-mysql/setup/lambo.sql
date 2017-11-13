@@ -14,7 +14,8 @@ Date: 2017-11-09 11:40:06
 */
 
 -- 创建数据库
-CREATE DATABASE IF NOT EXISTS `lambo` default character set utf8 collate utf8_general_ci ;
+drop database `lambo` IF EXISTS;
+CREATE DATABASE `lambo` default character set utf8 collate utf8_general_ci ;
 
 use lambo;
 
