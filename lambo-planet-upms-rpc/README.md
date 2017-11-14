@@ -20,3 +20,34 @@ docker run -d registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc
 ```
 docker run -d -v /e/docker/lambo-planet/upms-rpc/logs:/usr/local/lambo-upms-rpc-service/logs registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc
 ```
+
+### 查看运行的容器
+
+```
+docker ps
+7625a5b5fde8
+```
+
+### 重启容器
+
+```
+docker restart 7625a5b5fde8
+```
+
+### 停止容器
+
+```
+docker stop 7625a5b5fde8
+```
+
+### 启动容器
+
+```
+docker start 7625a5b5fde8
+```
+
+### 进入容器
+
+```
+docker exec -it 7625a5b5fde8 /bin/bash
+```
