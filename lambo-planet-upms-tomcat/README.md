@@ -35,3 +35,34 @@ docker run -d -p 1111:8080 -v /e/docker/lambo-planet/tomcat/logs:/usr/local/tomc
 ```
 
 注：本项目使用docker目的为便于分布式部署，不建议采用使用本地程序运行方式启动tomcat,如需运行本地程序请使用idea自带容器。
+
+### 查看运行的容器
+
+```
+docker ps
+f3e56952e40e
+```
+
+### 重启容器
+
+```
+docker restart f3e56952e40e
+```
+
+### 停止容器
+
+```
+docker stop f3e56952e40e
+```
+
+### 启动容器
+
+```
+docker start f3e56952e40e
+```
+
+### 进入容器
+
+```
+docker exec -it f3e56952e40e /bin/bash
+```
