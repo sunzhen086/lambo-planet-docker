@@ -6,4 +6,3 @@ RUN apt-get update && apt-get install net-tools && apt-get install procps -y
 CMD ["bash","/usr/local/lambo-upms-rpc-service/bin/start.sh"]
 #指定挂载点
 VOLUME /usr/local/logs
-EXPOSE 20881
