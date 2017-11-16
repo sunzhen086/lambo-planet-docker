@@ -33,3 +33,14 @@ lambo-planet-docker项目提供了lambo-planet项目的docker构建配置,这里
 ## 使用docker镜像部署lambo-planet
 
 - 本项目的每一个子项目都代表着一个docker镜像,镜像的具体使用请参考子项目下的REAMME.md
+
+- 安装docker-compose,window版本已经自带docker-compose
+
+- 在docker-compose.yml所在目录执行
+
+```
+docker-compose pull
+```
+```
+docker-compose up -d
+```
