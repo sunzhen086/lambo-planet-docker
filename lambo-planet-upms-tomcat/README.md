@@ -31,7 +31,7 @@ docker run -d -p 1111:8080 -v /e/server.xml:/usr/local/tomcat/conf/server.xml re
 ### 使用本地程序运行
 
 ```
-docker run -d -p 1111:8080 -v /e/docker/lambo-planet/tomcat/logs:/usr/local/tomcat/logs -v /e/lambo-upms-server:/usr/local/tomcat/webapps/lambo-upms-server registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-tomcat /usr/local/tomcat/bin/catalina.sh run
+docker run -d -p 1111:8080 -v /e/docker/lambo-planet/tomcat/logs:/usr/local/tomcat/logs -v /e/lambo-upms-server:/usr/local/tomcat/webapps/lambo-upms-server registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-tomcat
 ```
 
 注：本项目使用docker目的为便于分布式部署，不建议采用使用本地程序运行方式启动tomcat,如需运行本地程序请使用idea自带容器。
