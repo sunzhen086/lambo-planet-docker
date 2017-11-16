@@ -1,13 +1,13 @@
 ### pull
 
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis
+docker pull registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-redis
 ```
 
 ### run
 
 ```
-docker run  -d -p 6379:6379   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis
+docker run  -d -p 6379:6379   registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-redis
 ```
 
 ### 命令说明
@@ -19,7 +19,7 @@ docker run  -d -p 6379:6379   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-pla
 ### 指定数据保存目录
 
 ```
-docker run  -d -p 6379:6379 -v /e/docker/lambo-planet/redis/data:/data   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis
+docker run  -d -p 6379:6379 -v /e/docker/lambo-planet/redis/data:/data   registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-redis
 ```
 
 ### 查看运行的容器

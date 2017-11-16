@@ -1,13 +1,13 @@
 ### pull
 
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-mysql
+docker pull registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-mysql
 ```
 
 ### run
 
 ```
-docker run -d -p 3306:3306 -v /e/docker/lambo-planet/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-mysql
+docker run -d -p 3306:3306 -v /e/docker/lambo-planet/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root   registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-mysql
 ```
 
 ### 命令说明

@@ -1,25 +1,25 @@
 version: "2"
 services:
   zookeeper:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-zookeeper'
+    image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-zookeeper'
     hostname: zookeeper
     volumes:
       - /e/docker/lambo-planet/zookeeper/logs:/datalog
       - /e/docker/lambo-planet/zookeeper/data:/data
   redis:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-redis'
+    image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-redis'
     hostname: redis
     volumes:
       - /e/docker/lambo-planet/redis/data:/data
   mysql:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-mysql'
+    image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-mysql'
     hostname: mysql
     volumes:
       - /e/docker/lambo-planet/mysql/data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
   upms-rpc:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
+    image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
     hostname: upms-rpc
     volumes:
       - /e/docker/lambo-planet/upms/rpc-logs:/usr/local/lambo-upms-rpc-service/logs
@@ -31,7 +31,7 @@ services:
         - mysql
         - zookeeper
   upms-tomcat:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-tomcat'
+    image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-tomcat'
     hostname: upms-tomcat
     volumes:
       - /e/docker/lambo-planet/upms/tomcat-logs:/usr/local/tomcat/logs
@@ -47,7 +47,7 @@ services:
       - zookeeper
       - redis
   nginx:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx'
+    image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-nginx'
     hostname: nginx
     volumes:
       - /e/docker/lambo-planet/nginx/logs:/var/log/nginx

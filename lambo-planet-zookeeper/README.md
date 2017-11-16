@@ -1,13 +1,13 @@
 ### pull
 
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-zookeeper
+docker pull registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-zookeeper
 ```
 
 ### run
 
 ```
-docker run  -d -p 2181:2181   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-zookeeper
+docker run  -d -p 2181:2181   registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-zookeeper
 ```
 
 ### 命令说明
@@ -19,7 +19,7 @@ docker run  -d -p 2181:2181   registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-pla
 ### 将日志文件映射到本地,指定数据保存目录
 
 ```
-docker run  -d -p 2181:2181 -v /e/docker/lambo-planet/zookeeper/logs:/datalog -v /e/docker/lambo-planet/zookeeper/data:/data  registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-zookeeper
+docker run  -d -p 2181:2181 -v /e/docker/lambo-planet/zookeeper/logs:/datalog -v /e/docker/lambo-planet/zookeeper/data:/data  registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-zookeeper
 ```
 
 ### 查看运行的容器

@@ -1,13 +1,13 @@
 ### pull
 
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc 
+docker pull registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc 
 ```
 
 ### run
 
 ```
-docker run -d registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc
+docker run -d registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc
 ```
 
 ### 命令说明
@@ -18,7 +18,7 @@ docker run -d registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc
 ### 使用本地日志目录
 
 ```
-docker run -d -v /e/docker/lambo-planet/upms-rpc/logs:/usr/local/lambo-upms-rpc-service/logs registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc
+docker run -d -v /e/docker/lambo-planet/upms-rpc/logs:/usr/local/lambo-upms-rpc-service/logs registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc
 ```
 
 ### 查看运行的容器
