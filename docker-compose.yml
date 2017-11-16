@@ -18,6 +18,18 @@ services:
       - /e/docker/lambo-planet/mysql/data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
+  upms-rpc:
+    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
+    hostname: upms-rpc
+    volumes:
+      - /e/docker/lambo-planet/upms/rpc-logs:/usr/local/lambo-upms-rpc-service/logs
+    environment:
+      - ZOOKEEPER_SERVER=zookeeper
+      - DATABASE_SERVER=mysql
+      - REDIS_SERVER=redis
+    depends_on:
+        - mysql
+        - zookeeper
   upms-tomcat:
     image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-tomcat'
     hostname: upms-tomcat
@@ -30,15 +42,10 @@ services:
       - ZOOKEEPER_SERVER=zookeeper
       - REDIS_SERVER=redis
       - DATABASE_SERVER=mysql
-  upms-rpc:
-    image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
-    hostname: upms-rpc
-    volumes:
-      - /e/docker/lambo-planet/upms/rpc-logs:/usr/local/lambo-upms-rpc-service/logs
-    environment:
-      - ZOOKEEPER_SERVER=zookeeper
-      - DATABASE_SERVER=mysql
-      - REDIS_SERVER=redis
+    depends_on:
+      - upms-rpc
+      - zookeeper
+      - redis
   nginx:
     image: 'registry.cn-hangzhou.aliyuncs.com/btmagm/lambo-planet-nginx'
     hostname: nginx
@@ -46,3 +53,5 @@ services:
       - /e/docker/lambo-planet/nginx/logs:/var/log/nginx
     ports:
       - 80:80
+    depends_on:
+      - upms-tomcat
