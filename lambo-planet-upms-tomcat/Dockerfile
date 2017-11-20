@@ -1,4 +1,4 @@
-FROM tomcat:8.5.23-jre8
+FROM tomcat:8.5.23-jre8-alpine
 #维护者信息
 MAINTAINER jiangkun "525278372@qq.com"
 COPY ./upms/lambo-upms-server.war /usr/local/tomcat/webapps/upms.war
