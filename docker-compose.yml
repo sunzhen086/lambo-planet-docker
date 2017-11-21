@@ -60,3 +60,5 @@ services:
       - /e/github/lambo-planet-docker/lambo-planet-nginx/nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+    depends_on:
+      - upms-tomcat
