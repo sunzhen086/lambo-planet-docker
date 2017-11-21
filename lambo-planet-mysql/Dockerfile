@@ -4,4 +4,4 @@ LABEL maintainer="sunzhen <stomz@163.com>"
 
 #将所需文件放到容器中
 COPY ./setup /docker-entrypoint-initdb.d
-RUN echo "character-set-server=utf8" >> /etc/mysql/mysql.conf.d/mysqld.cnf
+COPY ./conf/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
