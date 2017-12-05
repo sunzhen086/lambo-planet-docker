@@ -3,6 +3,7 @@ services:
   zookeeper:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-zookeeper'
     hostname: zookeeper
+    privileged: true
     volumes:
       - /e/docker/lambo-planet/zookeeper/logs:/datalog
       - /e/docker/lambo-planet/zookeeper/data:/data
@@ -11,6 +12,7 @@ services:
   redis:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-redis'
     hostname: redis
+    privileged: true
     volumes:
       - /e/docker/lambo-planet/redis/data:/data
     ports:
@@ -18,6 +20,7 @@ services:
   mysql:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-mysql'
     hostname: mysql
+    privileged: true
     volumes:
       - /e/docker/lambo-planet/mysql/data:/var/lib/mysql
     environment:
@@ -27,6 +30,7 @@ services:
   upms-rpc:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
     hostname: upms-rpc
+    privileged: true
     volumes:
       - /e/docker/lambo-planet/upms/rpc-logs:/usr/local/lambo-upms-rpc-service/logs
     environment:
@@ -39,6 +43,7 @@ services:
   upms-tomcat:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-tomcat'
     hostname: upms-tomcat
+    privileged: true
     volumes:
       - /e/docker/lambo-planet/upms/tomcat-logs:/usr/local/tomcat/logs
       - /e/docker/lambo-planet/upms/server-logs:/usr/local/logs
@@ -55,6 +60,7 @@ services:
   nginx:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-nginx'
     hostname: nginx
+    privileged: true
     volumes:
       - /e/docker/lambo-planet/nginx/logs:/var/log/nginx
     ports:
