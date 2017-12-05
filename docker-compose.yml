@@ -14,7 +14,7 @@ services:
     volumes:
       - /e/docker/lambo-planet/redis/data:/data
     ports:
-      - 6379:6379
+      - 6349:6379
   mysql:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-mysql'
     hostname: mysql
