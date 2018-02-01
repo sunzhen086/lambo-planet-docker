@@ -27,6 +27,14 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - 3306:3306
+  swift:
+      image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-swift'
+      hostname: swift
+      privileged: true
+      volumes:
+        - /e/docker/lambo-planet/swift/data:/swift/nodes
+      ports:
+        - 8091:8080
   upms-rpc:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
     hostname: upms-rpc
@@ -34,7 +42,7 @@ services:
     volumes:
       - /e/docker/lambo-planet/upms/rpc-logs:/usr/local/lambo-upms-rpc-service/logs
     environment:
-      - ZOOKEEPER_SERVER=zookeeper
+      - ZOOKEEPER_SERVER=10.10.10.136
       - DATABASE_SERVER=mysql
       - REDIS_SERVER=redis
     depends_on:
@@ -64,6 +72,6 @@ services:
     volumes:
       - /e/docker/lambo-planet/nginx/logs:/var/log/nginx
     ports:
-      - 80:80
+      - 83:80
     depends_on:
       - upms-tomcat
