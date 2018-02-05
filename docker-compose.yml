@@ -39,12 +39,13 @@ services:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-rpc'
     hostname: upms-rpc
     privileged: true
+    network_mode: "host"
     volumes:
       - /e/docker/lambo-planet/upms/rpc-logs:/usr/local/lambo-upms-rpc-service/logs
     environment:
       - ZOOKEEPER_SERVER=10.10.10.136
-      - DATABASE_SERVER=mysql
-      - REDIS_SERVER=redis
+      - DATABASE_SERVER=10.10.10.136
+      - REDIS_SERVER=10.10.10.136
     depends_on:
         - mysql
         - zookeeper
@@ -58,9 +59,9 @@ services:
     ports:
       - 1111:8080
     environment:
-      - ZOOKEEPER_SERVER=zookeeper
-      - REDIS_SERVER=redis
-      - DATABASE_SERVER=mysql
+      - ZOOKEEPER_SERVER=10.10.10.136
+      - REDIS_SERVER=10.10.10.136
+      - DATABASE_SERVER=10.10.10.136
     depends_on:
       - upms-rpc
       - zookeeper
