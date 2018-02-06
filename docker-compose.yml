@@ -53,11 +53,10 @@ services:
     image: 'registry.cn-beijing.aliyuncs.com/btmagm/lambo-planet-upms-tomcat'
     hostname: upms-tomcat
     privileged: true
+    network_mode: "host"
     volumes:
       - /e/docker/lambo-planet/upms/tomcat-logs:/usr/local/tomcat/logs
       - /e/docker/lambo-planet/upms/server-logs:/usr/local/logs
-    ports:
-      - 1111:8080
     environment:
       - ZOOKEEPER_SERVER=10.10.10.136
       - REDIS_SERVER=10.10.10.136
